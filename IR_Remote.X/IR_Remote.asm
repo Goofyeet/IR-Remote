@@ -116,21 +116,6 @@ scan:
     in status,SREG	    ;preserve status register
     ser pinscans	    ;set pinscans to 255
     
-debounceDelay:
-    ldi temp,mBounceDelay
-    mov medBounce,temp    
-    ldi temp,fBounceDelay
-    mov fineBounce,temp
-    mbounce:
-	    mov fineBounce,temp
-    fbounce:
-	    dec fineBounce
-	    nop
-	    brne fbounce
-	    dec medBounce
-	    brne mbounce
-	  
-    
 scan1:    
     in pinstatus,PINB	    ;store PINB register values in pinstatus
     
@@ -148,6 +133,9 @@ scan1:
     
     cpi pinstatus,ModePB    ;if only mode pb is pushed
     breq sendMode	    ;branch to sendMode
+    
+    dec pinscans
+    brne scan1
     
     rjmp exit		    ;jump to exit interrupt
     
