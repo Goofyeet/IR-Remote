@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.8  IR_Remote.asm Fri May 06 20:06:11 2022
+AVRASM ver. 2.2.8  IR_Remote.asm Sun May 15 19:42:07 2022
 
 
 EQU  SIGNATURE_000 0000001e
@@ -153,12 +153,11 @@ EQU  TimerH       000000f4
 EQU  TimerL       0000000b
 EQU  ModeH        000000f0
 EQU  ModeL        0000000f
-EQU  normal       0000003b
-EQU  PowerPB      0000001b
-EQU  SpeedPB      00000033
-EQU  RotatePB     0000002b
-EQU  TimerPB      0000003a
-EQU  ModePB       00000039
+EQU  normal       0000001b
+EQU  SpeedPB      00000013
+EQU  RotatePB     0000000b
+EQU  TimerPB      0000001a
+EQU  ModePB       00000019
 EQU  finemark     0000003d
 EQU  finezerospace 000000c0
 EQU  fineonespace 0000004f
@@ -191,31 +190,28 @@ DEF  mediumdelay  r25
 CSEG reset        00000003
 CSEG scan         0000000f
 CSEG main         0000000a
-CSEG debounceDelay 00000011
-CSEG mbounce      00000015
-CSEG fbounce      00000016
-CSEG scan1        0000001b
-CSEG sendPower    00000027
-CSEG sendSpeed    0000002b
-CSEG sendRotate   0000002f
-CSEG sendTimer    00000033
-CSEG sendMode     00000037
-CSEG exit         0000003a
-CSEG output       00000040
-CSEG returnInterrupt 0000003e
-CSEG start        00000040
-CSEG modulator    00000075
-CSEG delay        0000006e
-CSEG preamble     00000046
-CSEG encoder_init 00000059
-CSEG code         0000004c
-CSEG stop         00000051
-CSEG mediumencode 00000055
-CSEG encoder      0000005d
-CSEG highbit      00000066
-CSEG lowBit       00000062
-CSEG handleloop   00000069
-CSEG mediumloop   0000006f
-CSEG fineloop     00000070
-CSEG magain       00000076
-CSEG fagain       00000077
+CSEG scan1        00000011
+CSEG sendSpeed    00000021
+CSEG sendRotate   00000025
+CSEG sendTimer    00000029
+CSEG sendMode     0000002d
+CSEG exit         00000030
+CSEG sendPower    0000001d
+CSEG output       00000036
+CSEG returnInterrupt 00000034
+CSEG start        00000036
+CSEG modulator    0000006b
+CSEG delay        00000064
+CSEG preamble     0000003c
+CSEG encoder_init 0000004f
+CSEG code         00000042
+CSEG stop         00000047
+CSEG mediumencode 0000004b
+CSEG encoder      00000053
+CSEG highbit      0000005c
+CSEG lowBit       00000058
+CSEG handleloop   0000005f
+CSEG mediumloop   00000065
+CSEG fineloop     00000066
+CSEG magain       0000006c
+CSEG fagain       0000006d

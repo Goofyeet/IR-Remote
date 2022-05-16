@@ -1,7 +1,7 @@
 <ASSEMBLER_INFO>
  <VERSION>2.2.8</VERSION>
  <DEVICE>"ATtiny12"</DEVICE>
- <WORKING_DIR>H:\Documents\Projects\IR remote Clone\IR_Remote.X</WORKING_DIR>
+ <WORKING_DIR>H:\Documents\Projects\Git Repos\IR remote Clone\IR_Remote.X</WORKING_DIR>
  <INCLUDE_PATH>
   <DIR>C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/ATtiny_DFP/2.7.128/avrasm/inc</DIR>
   <DIR></DIR>
@@ -21,36 +21,33 @@
   <FILE>dist/default/production/IR_Remote.X.production.lss</FILE>
  </OUTPUT_FILES>
  <LABELS>
-  <reset><FILE>IR_Remote.asm</FILE><LINE>92</LINE></reset>
-  <scan><FILE>IR_Remote.asm</FILE><LINE>115</LINE></scan>
-  <main><FILE>IR_Remote.asm</FILE><LINE>101</LINE></main>
-  <debounceDelay><FILE>IR_Remote.asm</FILE><LINE>119</LINE></debounceDelay>
-  <mbounce><FILE>IR_Remote.asm</FILE><LINE>124</LINE></mbounce>
-  <fbounce><FILE>IR_Remote.asm</FILE><LINE>126</LINE></fbounce>
-  <scan1><FILE>IR_Remote.asm</FILE><LINE>134</LINE></scan1>
-  <sendPower><FILE>IR_Remote.asm</FILE><LINE>154</LINE></sendPower>
-  <sendSpeed><FILE>IR_Remote.asm</FILE><LINE>160</LINE></sendSpeed>
-  <sendRotate><FILE>IR_Remote.asm</FILE><LINE>166</LINE></sendRotate>
-  <sendTimer><FILE>IR_Remote.asm</FILE><LINE>172</LINE></sendTimer>
-  <sendMode><FILE>IR_Remote.asm</FILE><LINE>178</LINE></sendMode>
-  <exit><FILE>IR_Remote.asm</FILE><LINE>183</LINE></exit>
-  <output><FILE>IR_Remote.asm</FILE><LINE>199</LINE></output>
-  <returnInterrupt><FILE>IR_Remote.asm</FILE><LINE>189</LINE></returnInterrupt>
-  <start><FILE>IR_Remote.asm</FILE><LINE>201</LINE></start>
-  <modulator><FILE>IR_Remote.asm</FILE><LINE>293</LINE></modulator>
-  <delay><FILE>IR_Remote.asm</FILE><LINE>279</LINE></delay>
-  <preamble><FILE>IR_Remote.asm</FILE><LINE>210</LINE></preamble>
-  <encoder_init><FILE>IR_Remote.asm</FILE><LINE>243</LINE></encoder_init>
-  <code><FILE>IR_Remote.asm</FILE><LINE>220</LINE></code>
-  <stop><FILE>IR_Remote.asm</FILE><LINE>228</LINE></stop>
-  <mediumencode><FILE>IR_Remote.asm</FILE><LINE>237</LINE></mediumencode>
-  <encoder><FILE>IR_Remote.asm</FILE><LINE>249</LINE></encoder>
-  <highbit><FILE>IR_Remote.asm</FILE><LINE>265</LINE></highbit>
-  <lowBit><FILE>IR_Remote.asm</FILE><LINE>258</LINE></lowBit>
-  <handleloop><FILE>IR_Remote.asm</FILE><LINE>271</LINE></handleloop>
-  <mediumloop><FILE>IR_Remote.asm</FILE><LINE>281</LINE></mediumloop>
-  <fineloop><FILE>IR_Remote.asm</FILE><LINE>283</LINE></fineloop>
-  <magain><FILE>IR_Remote.asm</FILE><LINE>296</LINE></magain>
-  <fagain><FILE>IR_Remote.asm</FILE><LINE>298</LINE></fagain>
+  <reset><FILE>IR_Remote.asm</FILE><LINE>105</LINE></reset>
+  <scan><FILE>IR_Remote.asm</FILE><LINE>128</LINE></scan>
+  <main><FILE>IR_Remote.asm</FILE><LINE>114</LINE></main>
+  <scan1><FILE>IR_Remote.asm</FILE><LINE>132</LINE></scan1>
+  <sendSpeed><FILE>IR_Remote.asm</FILE><LINE>163</LINE></sendSpeed>
+  <sendRotate><FILE>IR_Remote.asm</FILE><LINE>169</LINE></sendRotate>
+  <sendTimer><FILE>IR_Remote.asm</FILE><LINE>175</LINE></sendTimer>
+  <sendMode><FILE>IR_Remote.asm</FILE><LINE>181</LINE></sendMode>
+  <exit><FILE>IR_Remote.asm</FILE><LINE>186</LINE></exit>
+  <sendPower><FILE>IR_Remote.asm</FILE><LINE>157</LINE></sendPower>
+  <output><FILE>IR_Remote.asm</FILE><LINE>202</LINE></output>
+  <returnInterrupt><FILE>IR_Remote.asm</FILE><LINE>192</LINE></returnInterrupt>
+  <start><FILE>IR_Remote.asm</FILE><LINE>204</LINE></start>
+  <modulator><FILE>IR_Remote.asm</FILE><LINE>296</LINE></modulator>
+  <delay><FILE>IR_Remote.asm</FILE><LINE>282</LINE></delay>
+  <preamble><FILE>IR_Remote.asm</FILE><LINE>213</LINE></preamble>
+  <encoder_init><FILE>IR_Remote.asm</FILE><LINE>246</LINE></encoder_init>
+  <code><FILE>IR_Remote.asm</FILE><LINE>223</LINE></code>
+  <stop><FILE>IR_Remote.asm</FILE><LINE>231</LINE></stop>
+  <mediumencode><FILE>IR_Remote.asm</FILE><LINE>240</LINE></mediumencode>
+  <encoder><FILE>IR_Remote.asm</FILE><LINE>252</LINE></encoder>
+  <highbit><FILE>IR_Remote.asm</FILE><LINE>268</LINE></highbit>
+  <lowBit><FILE>IR_Remote.asm</FILE><LINE>261</LINE></lowBit>
+  <handleloop><FILE>IR_Remote.asm</FILE><LINE>274</LINE></handleloop>
+  <mediumloop><FILE>IR_Remote.asm</FILE><LINE>284</LINE></mediumloop>
+  <fineloop><FILE>IR_Remote.asm</FILE><LINE>286</LINE></fineloop>
+  <magain><FILE>IR_Remote.asm</FILE><LINE>299</LINE></magain>
+  <fagain><FILE>IR_Remote.asm</FILE><LINE>301</LINE></fagain>
  </LABELS>
 </ASSEMBLER_INFO>
