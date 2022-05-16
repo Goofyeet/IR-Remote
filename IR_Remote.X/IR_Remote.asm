@@ -1,3 +1,6 @@
+#define DEBUG 0
+    
+    
 ;global registers    
     
 .def	    temp =r16	;general temporary register	  
@@ -18,12 +21,22 @@
 .equ	    ModeL =0x0f  
     
 ;Pushbutton pins
+    
+#if DEBUG
+.equ	    normal =0x1b 
+.equ	    SpeedPB =0x13	;PB3
+.equ	    RotatePB =0x0b   	;PB4
+.equ	    TimerPB =0x1a	;PB0
+.equ	    ModePB =0x19	;PB1 
+    
+#else
 .equ	    normal =0x3b
 .equ	    PowerPB =0x1b	;PB5 
 .equ	    SpeedPB =0x33	;PB3
 .equ	    RotatePB =0x2b	;PB4
 .equ	    TimerPB =0x3a	;PB0
-.equ	    ModePB =0x39	;PB1
+.equ	    ModePB =0x39	;PB1   
+#endif
     
 ;delays
 .equ	    finemark =61
@@ -119,9 +132,11 @@ scan:
 scan1:    
     in pinstatus,PINB	    ;store PINB register values in pinstatus
     
+#if !DEBUG
     cpi pinstatus,PowerPB   ;if only power pb is pushed
     breq sendPower	    ;branch to sendPower
-    
+#endif  
+ 
     cpi pinstatus,SpeedPB   ;if only speed pb is pushed
     breq sendSpeed	    ;branch to sendSpeed
     
