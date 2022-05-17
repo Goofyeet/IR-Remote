@@ -1,6 +1,5 @@
 #define DEBUG 1
-    
-    
+      
 ;global registers    
     
 .def	    temp =r16	;general temporary register	  
@@ -74,7 +73,6 @@
 .def	    signalL =r20 
     
 ;delay routine
-;.def	    carrierloop =r21
 .def	    fine =r22
 .def	    medium =r23
 .def	    finedelay =r24
@@ -83,7 +81,7 @@
 ;r27 used for toggleoutput macro
     
     
-;macros
+;macro
 .macro	    toggleoutput    ;toggles output pin
     in @0,PORTB		    ;@0: invertedbit
     ldi @1,@2		    ;@1: r27
