@@ -1,0 +1,25 @@
+#visual studio
+.vs/
+
+
+#IR_remote.x project files
+.generated_files/
+build/
+debug/
+dist/
+nbproject/
+*.log
+*.hex
+*.scl
+*.inx
+Makefile
+
+
+#kicad files
+*.sch-bak
+*.net
+*.kicad_pcb-bak
+
+
+
+*.zip
