@@ -1,0 +1,41 @@
+"-x option"
+x would be the letter to access that option, the following is in this format.
+
+-p partno
+partno = t12
+
+-b bitrate
+-b 115200
+
+-c programmer-id
+programmer-id = arduino
+
+
+
+avrdude -c arduino -b 19200 -p t12
+
+avrdude -c arduino -b 19200 -p t12 -P COM4 -n
+
+avrdude -c arduino -b 19200 -p t12 -P COM4 -U flash:w:filename.hex
+
+
+H:\Documents\Projects\IR remote Clone\IR_Remote.hex
+
+
+-U memtype :op :filename [:format ]
+
+memtype = fuse
+op = w
+filename = 0x42
+format = m
+
+set fuses:
+avrdude -c arduino -b 19200 -p t12 -P COM4 -U fuse:w:0x42:m
+
+
+flash hex file:
+avrdude -c arduino -b 19200 -p t12 -P COM4 -U flash:w:"H:\Documents\Projects\IR remote Clone\IR_Remote.X\IR_Remote.hex":i
+
+avrdude -c arduino -b 19200 -p t12 -P COM4 -U flash:w:"H:\Documents\Projects\Git Repos\IR remote Clone\IR_Remote.X\dist\default\production\IR_Remote.X.production.hex":i
+
+The above only seemed to work with :i at the end
