@@ -110,9 +110,9 @@ reset:
     sbi ACSR,7		;Disables analog comparator
                
 main:
-    sei			;enable global interrupts
     ldi temp,0x30
-    out MCUCR,temp	;enable sleep mode
+    out MCUCR,temp	;enable sleep mode   
+    sei			;enable global interrupts
     sleep		;Tells Microcontroller to enter sleep mode
     rjmp main		;loop over sleep instruction
     
