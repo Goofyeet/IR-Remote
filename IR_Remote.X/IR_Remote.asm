@@ -89,6 +89,8 @@
     out PORTB,@0    
 .endmacro    
     
+    
+;########Interrupt Vectors##############
 .org 0    
     rjmp    reset	;reset vector
 .org 2
@@ -108,7 +110,9 @@ reset:
     ldi temp,0x1b	;stores bit mask for enabling input pull-ups
     out	PORTB,temp	;enables input pull-ups
     sbi ACSR,7		;Disables analog comparator
-               
+       
+    rcall debounceDelay
+    
 main:
     ldi temp,0x30
     out MCUCR,temp	;enable sleep mode   
@@ -127,6 +131,8 @@ scan:
     in status,SREG	    ;preserve status register
     ser pinscans	    ;set pinscans to 255
     
+rcall debounceDelay
+	   
 scan1:    
     in pinstatus,PINB	    ;store PINB register values in pinstatus
     
@@ -146,9 +152,6 @@ scan1:
     
     cpi pinstatus,ModePB    ;if only mode pb is pushed
     breq sendMode	    ;branch to sendMode
-    
-    dec pinscans
-    brne scan1
     
     rjmp exit		    ;jump to exit interrupt
     
@@ -194,6 +197,27 @@ returnInterrupt:
 ;*****end of pin scan********************************
     
 
+;****************************************************
+;		Debounce Delay
+;****************************************************
+debounceDelay:
+    ldi temp,mBounceDelay
+    mov medBounce,temp    
+    ldi temp,fBounceDelay
+    mov fineBounce,temp
+    mbounce:
+	    mov fineBounce,temp
+    fbounce:
+	    dec fineBounce
+	    nop
+	    brne fbounce
+	    dec medBounce
+	    brne mbounce
+	    ret
+	    
+;**************************************************
+
+	    
 ;********************************************    
 ;	Output, creates output signal    
 ;********************************************    
@@ -233,7 +257,6 @@ stop:
     ret
     
 
-;start with MSB
 ;******encoder, encodes each bit of signal*************    
 mediumencode:
     ldi temp,8
